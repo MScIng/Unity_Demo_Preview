@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4490027018617102215}
   - component: {fileID: 5702679672108202548}
   - component: {fileID: 6622647708872346589}
+  - component: {fileID: -847105779988980572}
   m_Layer: 0
   m_Name: LauncherSphere
   m_TagString: Untagged
@@ -130,6 +131,20 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-847105779988980572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6599521607666747738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a7caf9da1eb4944dbd9dadfcc595627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  summonModel: {fileID: 4029767448637774778, guid: e2cde5cf8b8c79b45928082d72b1768d, type: 3}
+  launcherScript: {fileID: 7393320175602071487, guid: f6002e6a44dce244ca4441eeb6f5faed, type: 3}

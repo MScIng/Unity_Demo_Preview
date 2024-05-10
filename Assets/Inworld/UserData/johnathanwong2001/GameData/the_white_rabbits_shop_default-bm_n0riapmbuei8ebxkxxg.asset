@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5abd9eaac9cc3e4585d7e8574c2511c, type: 3}
+  m_Name: the_white_rabbits_shop_default-bm_n0riapmbuei8ebxkxxg
+  m_EditorClassIdentifier: 
+  sceneFullName: workspaces/default-bm_n0riapmbuei8ebxkxxg/scenes/the_white_rabbits_shop
+  apiKey: E2zAYXaA95qIFSpU1jWbm9atwNQHsgSl
+  apiSecret: RdMr8Z1CGLzTbtVGM2fsERcDZ3S5yHeDonORIGPDNP2XIq30wQNDbYgyVG6KXakk
+  characters:
+  - agentId: 
+    brainName: workspaces/default-bm_n0riapmbuei8ebxkxxg/characters/game_master
+    givenName: Game Master
+    characterAssets:
+      rpmModelUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_model/7b23978b-4640-4b45-9753-80318c0b9c2a.glb
+      rpmImageUriPortrait: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_image/7b23978b-4640-4b45-9753-80318c0b9c2a_portrait.jpg
+      rpmImageUriPosture: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_image/7b23978b-4640-4b45-9753-80318c0b9c2a_posture.jpg
+      avatarImg: https://storage.googleapis.com/inworld-ai-usercontent-prod/2d_image/5f67075d-c98e-49e1-b3fe-21cdf967323c.jpg
+      avatarImgOriginal: https://storage.googleapis.com/inworld-ai-usercontent-prod/2d_image/5f67075d-c98e-49e1-b3fe-21cdf967323c-original.jpg
+      thumbnailProgress: 0
+      avatarProgress: 0
+    thumbnail: {fileID: 0}
+  - agentId: 
+    brainName: workspaces/default-bm_n0riapmbuei8ebxkxxg/characters/the_white_rabbit
+    givenName: The White Rabbit
+    characterAssets:
+      rpmModelUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_model/a307f8d1-b703-404a-a70e-951495131667.glb
+      rpmImageUriPortrait: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_image/a307f8d1-b703-404a-a70e-951495131667_portrait.jpg
+      rpmImageUriPosture: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_image/a307f8d1-b703-404a-a70e-951495131667_posture.jpg
+      avatarImg: https://storage.googleapis.com/inworld-ai-usercontent-prod/2d_image/5ee83cf8-5215-4d2e-9a9d-9fb436e5e1a1.jpg
+      avatarImgOriginal: https://storage.googleapis.com/inworld-ai-usercontent-prod/2d_image/5ee83cf8-5215-4d2e-9a9d-9fb436e5e1a1-original.jpg
+      thumbnailProgress: 0
+      avatarProgress: 0
+    thumbnail: {fileID: 0}
+  capabilities:
+    audio: 1
+    emotions: 1
+    interruptions: 1
+    narratedActions: 1
+    text: 1
+    triggers: 1
+    phonemeInfo: 1
+    relations: 1
+    debugInfo: 0
+    multiAgent: 1
