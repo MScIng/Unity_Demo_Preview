@@ -34,25 +34,27 @@ public class SummonObj : MonoBehaviour
     void Summon()
     {
         Destroy(gameObject);
-        launcher.isShootMode = true;
         if (onGround)
         {
             Vector3 direction = Camera.main.transform.position - transform.position;
             direction.y = 0;
             Quaternion rotation = Quaternion.LookRotation(direction, Vector3.up);
-            Instantiate(summonModel, gameObject.transform.position, rotation);
+            Instantiate(summonModel, gameObject.transform.position, rotation, transform.parent);
+            launcher.SummonSuccess(true);
         }
         else
         {
+            launcher.SummonSuccess(false);
             Debug.Log("Not on Ground");
         }
         
     }
 
+
     void OutOfBound()
     {
         Destroy(gameObject);
-        launcher.isShootMode = true;
+        launcher.SummonSuccess(false);
         Debug.Log("Out Of Bound, Scan Before You Summon.");
     }
 
