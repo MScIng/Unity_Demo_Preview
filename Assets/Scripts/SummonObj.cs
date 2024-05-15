@@ -22,7 +22,6 @@ public class SummonObj : MonoBehaviour
         if (!hit)
         {
             Invoke("Summon", 1.0f);
-            print(collision.transform);
             hit = true;
         }
     }

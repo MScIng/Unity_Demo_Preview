@@ -10,7 +10,7 @@ public class FaceCamera : MonoBehaviour
 
     void Update()
     {
-        Vector3 direction = Camera.main.transform.position - transform.position;
+        Vector3 direction = transform.position - Camera.main.transform.position;
         direction.y = 0;
         Quaternion rotation = Quaternion.LookRotation(direction);
         transform.rotation = rotation;

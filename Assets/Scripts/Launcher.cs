@@ -9,6 +9,8 @@ public class Launcher : MonoBehaviour
     public GameObject _prefab;
     public bool isShootMode = true;
     public GameObject deleteButton;
+    public GameObject microphoneButton;
+    public GameObject typeButton;
     void Update()
     {
 #if UNITY_EDITOR
@@ -61,6 +63,8 @@ public class Launcher : MonoBehaviour
 
         // UI disable
         deleteButton.SetActive(false);
+        microphoneButton.SetActive(false);
+        typeButton.SetActive(false);
     }
 
     IEnumerator DelayedModeChange(float delay)
