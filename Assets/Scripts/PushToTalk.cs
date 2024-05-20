@@ -10,6 +10,7 @@ namespace Inworld.AEC
     
         public Button button;
         private bool toggle = false;
+        private bool active = false;
 
         void Start()
         {
@@ -18,6 +19,12 @@ namespace Inworld.AEC
 
         void Update()
         {
+            
+        }
+
+        public void Toggling()
+        {
+            toggle = !toggle;
             if (toggle)
             {
                 StartAudio();
@@ -26,11 +33,6 @@ namespace Inworld.AEC
             {
                 StopAudio();
             }
-        }
-
-        public void Toggling()
-        {
-            toggle = !toggle;
             Debug.Log(toggle);
         }
     }
