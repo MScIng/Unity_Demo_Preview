@@ -6,11 +6,19 @@ using UnityEngine.EventSystems;
 
 public class Launcher : MonoBehaviour
 {
-    public GameObject _prefab;
+    private GameObject _prefab;
+    public List<GameObject> listPrefab;
     public bool isShootMode = true;
     public GameObject deleteButton;
     public GameObject microphoneButton;
     public GameObject typeButton;
+    public int tempNum= 0;
+
+    void Start()
+    {
+        tempNum = GameManager.Instance.summonNum;
+        _prefab = listPrefab[tempNum];
+    }
     void Update()
     {
 #if UNITY_EDITOR

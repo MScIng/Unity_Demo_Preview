@@ -1626,7 +1626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3042a038c773c604592399146d439557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiKey: 0
+  uiKey: 256
   optionKey: 0
   skipKey: 0
   continueKey: 0
@@ -1635,7 +1635,7 @@ MonoBehaviour:
   m_InputField: {fileID: 1131580787}
   m_Dropdown: {fileID: 841853937}
   m_SendButton: {fileID: 860575935}
-  m_RecordButton: {fileID: 0}
+  m_RecordButton: {fileID: 709010861}
   onPlayerSpeaks:
     m_PersistentCalls:
       m_Calls: []
@@ -2611,6 +2611,7 @@ GameObject:
   - component: {fileID: 297504527}
   - component: {fileID: 297504526}
   - component: {fileID: 297504525}
+  - component: {fileID: 297504528}
   m_Layer: 5
   m_Name: Mesh Visualizor Button
   m_TagString: Untagged
@@ -2694,6 +2695,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 297504528}
+        m_TargetAssemblyTypeName: reload, Assembly-CSharp
+        m_MethodName: ReloadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &297504526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2732,6 +2745,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297504523}
   m_CullTransparentMesh: 1
+--- !u!114 &297504528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297504523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d422dd99d04634d82f8429e567164c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &332940126
 GameObject:
   m_ObjectHideFlags: 0
@@ -5371,6 +5396,7 @@ GameObject:
   - component: {fileID: 709010863}
   - component: {fileID: 709010862}
   - component: {fileID: 709010861}
+  - component: {fileID: 709010864}
   m_Layer: 5
   m_Name: 'Microphone Button '
   m_TagString: Untagged
@@ -5480,6 +5506,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709010859}
   m_CullTransparentMesh: 1
+--- !u!114 &709010864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709010859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e15bc7b11655949b683279a4cc5244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &715041373
 GameObject:
   m_ObjectHideFlags: 0
@@ -5846,7 +5884,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5556377780116934527, guid: f787cea5870c91b4ebe8571dc197a25f, type: 3}
   m_PrefabInstance: {fileID: 799128855}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &771849729
+--- !u!114 &771849730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5855,26 +5893,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 771849718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 270728e90ac73854c8ccd92126e49df0, type: 3}
+  m_Script: {fileID: 11500000, guid: e3a983059153f624da1495b1fad38374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SamplingMode: 1
-  m_PlayerVolumeThreshold: 2
-  m_BufferSeconds: 1
-  m_DeviceName: 
-  OnRecordingStart:
-    m_PersistentCalls:
-      m_Calls: []
-  OnRecordingEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPlayerStartSpeaking:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPlayerStopSpeaking:
-    m_PersistentCalls:
-      m_Calls: []
-  button: {fileID: 709010861}
+  summonNum: 0
 --- !u!1 &783104288
 GameObject:
   m_ObjectHideFlags: 0
@@ -6498,7 +6520,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: ba62808bcdca720498ae2de8cdff18fb, type: 2}
     - target: {fileID: 3331053244747017235, guid: f787cea5870c91b4ebe8571dc197a25f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3331053244747017235, guid: f787cea5870c91b4ebe8571dc197a25f, type: 3}
       propertyPath: m_SamplingMode
@@ -6548,13 +6570,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: InworldController
       objectReference: {fileID: 0}
+    - target: {fileID: 5563578907791798683, guid: f787cea5870c91b4ebe8571dc197a25f, type: 3}
+      propertyPath: m_AutoScene
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563578907791798683, guid: f787cea5870c91b4ebe8571dc197a25f, type: 3}
+      propertyPath: m_Continuation.continuationType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5556377780116934527, guid: f787cea5870c91b4ebe8571dc197a25f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 771849729}
+      addedObject: {fileID: 771849730}
   m_SourcePrefab: {fileID: 100100000, guid: f787cea5870c91b4ebe8571dc197a25f, type: 3}
 --- !u!1 &799841583
 GameObject:
@@ -6929,7 +6959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &841853934
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7120,8 +7150,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Inworld.PlayerController, Inworld.AI
+      - m_Target: {fileID: 200439127}
+        m_TargetAssemblyTypeName: Inworld.Sample.PlayerController, Inworld.AI
         m_MethodName: SendText
         m_Mode: 1
         m_Arguments:
@@ -11507,7 +11537,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453102400}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &1453102407
 Camera:
   m_ObjectHideFlags: 0
@@ -13940,6 +13970,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1807709855}
+        m_TargetAssemblyTypeName: DestroyOnBack, Assembly-CSharp
+        m_MethodName: RemoveItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1807709854}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: NextScene
@@ -14636,6 +14678,7 @@ GameObject:
   - component: {fileID: 1807709851}
   - component: {fileID: 1807709850}
   - component: {fileID: 1807709854}
+  - component: {fileID: 1807709855}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -14742,6 +14785,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42451af6f0f294845a63197374888a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1807709855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807709849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48376ee6c5007dc42bc79f268905b6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 771849718}
 --- !u!1 &1824323709
 GameObject:
   m_ObjectHideFlags: 0
@@ -16175,6 +16231,18 @@ PrefabInstance:
       propertyPath: microphoneButton
       value: 
       objectReference: {fileID: 709010859}
+    - target: {fileID: 8864735035603258844, guid: f6002e6a44dce244ca4441eeb6f5faed, type: 3}
+      propertyPath: listPrefab.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864735035603258844, guid: f6002e6a44dce244ca4441eeb6f5faed, type: 3}
+      propertyPath: listPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 6599521607666747738, guid: da6a893986a371f4dabcbceb48ec24bf, type: 3}
+    - target: {fileID: 8864735035603258844, guid: f6002e6a44dce244ca4441eeb6f5faed, type: 3}
+      propertyPath: listPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 6599521607666747738, guid: 0e827e23c2e8d224f91fecb43ba9e39a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

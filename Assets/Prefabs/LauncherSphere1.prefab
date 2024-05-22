@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6622647708872346589}
   - component: {fileID: -847105779988980572}
   m_Layer: 0
-  m_Name: LauncherSphere
+  m_Name: LauncherSphere1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
