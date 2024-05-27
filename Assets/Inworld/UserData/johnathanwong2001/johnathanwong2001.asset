@@ -23,5 +23,13 @@ MonoBehaviour:
     runtimeAccess: RUNTIME_ACCESS_PRIVATE
     scenes: []
     keySecrets: []
+  - name: workspaces/my_project-plu33
+    displayName: my project
+    experimentalFeatures: []
+    billingAccount: billing-accounts/92a22324-8b46-4eb6-b3cc-186e0ec9b2dd
+    meta: 
+    runtimeAccess: RUNTIME_ACCESS_PRIVATE
+    scenes: []
+    keySecrets: []
   m_UserID: 
   m_BillingAccount: billing-accounts/92a22324-8b46-4eb6-b3cc-186e0ec9b2dd

@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class TapNPlace : MonoBehaviour
 {
-    public GameObject objectToPlace;
+    public GameObject[] objectToPlace;
     public GameObject modelInstance;
     private ARRaycastManager arRaycastManager;
     public bool isSummon = false;
@@ -47,15 +47,17 @@ public class TapNPlace : MonoBehaviour
         if (arRaycastManager.Raycast(position, hits, TrackableType.Planes))
         {
             Pose hitPose = hits[0].pose;
-
+            
             Vector3 directionToCamera = Camera.main.transform.position - hitPose.position;
             directionToCamera.y = 0; // Keep the direction on the horizontal plane
 
             // Calculate the rotation that makes the object face the camera
             Quaternion lookRotation = Quaternion.LookRotation(directionToCamera);
 
+            // GameObject modelObject = objectToPlace[Instance.summonNum];
+            // Debug.Log(modelObject.name);
             // Instantiate the object at the hit position with the calculated rotation
-            Instantiate(objectToPlace, hitPose.position, lookRotation, modelInstance.transform);
+            Instantiate(objectToPlace[GameManager.Instance.summonNum], hitPose.position, lookRotation, modelInstance.transform);
             isSummon = true;
         }
     }
