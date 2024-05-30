@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public int summonNum = 0;
+    public int mapSummon = 0;
 
     private void Awake()
     {

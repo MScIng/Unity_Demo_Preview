@@ -12,13 +12,13 @@ public class TapNPlace : MonoBehaviour
     private ARRaycastManager arRaycastManager;
     public bool isSummon = false;
 
-    void Start()
+    protected virtual void Awake()
     {
         arRaycastManager = GetComponent<ARRaycastManager>();
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         if (!isSummon)
         {
@@ -41,7 +41,7 @@ public class TapNPlace : MonoBehaviour
         }
     }
 
-    void PlaceObject(Vector2 position)
+    public virtual void PlaceObject(Vector2 position)
     {
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
         if (arRaycastManager.Raycast(position, hits, TrackableType.Planes))
@@ -62,7 +62,7 @@ public class TapNPlace : MonoBehaviour
         }
     }
 
-    bool IsTouchOverUI(Vector2 touchPosition)
+    protected virtual bool IsTouchOverUI(Vector2 touchPosition)
     {
         // Check if the touch is over UI elements
         return EventSystem.current.IsPointerOverGameObject() || EventSystem.current.IsPointerOverGameObject(0);
