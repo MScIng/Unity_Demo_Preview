@@ -2,4 +2,6 @@
  This project used InWorld SDK and Niantic LightShip SDK 
 
 ## Demo
- [![Watch the video](sample/Screenshot%202024-07-07%20101219.png)](sample/YouCut_20240707_101502229.mp4)
+
+https://github.com/yakultproducer/InWorld-Project/assets/104656669/646542d0-53ff-4430-9e42-edb32a900b25
+
